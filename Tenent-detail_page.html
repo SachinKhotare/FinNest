@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FinNest - Tenant Portal</title>
+   <link rel="icon" type="image/x-icon" href="./Images/Logo.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/home.css">
+  
+</head>
+<body>
+
+  <!-- Header -->
+<header class="bg-primary text-white py-4 shadow-lg rounded">
+  <div class="container text-center">
+    <h1 class="display-5 fw-semibold mb-1">FinNest - Tenant Portal</h1>
+    <p class="lead fst-italic mb-0">A smart and secure space for tenants to manage rent, agreements, utility receipts, issue tracking, and communication with property owners—all in one place.</p>
+  </div>
+</header>
+
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-0 shadow-lg rounded">
+    <div class="container">
+      <img src="./Images/Logo.png" alt="" width="25" height="24" class="d-inline-block align-text-top me-2">
+      <a class="navbar-brand" href="./Home_page.html">FinNest</a>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+
+          
+        <!-- Password Changed Button -->
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./Change-Password_page.html"><button class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-plus-square-dotted"> </i>Change Password</button></a>
+        </li>
+        <!-- Logout Button -->
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./Login_page.html"><button class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-person-fill-x"> </i>Logout</button></a>
+        </li>
+      
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+   <!-- Main Content -->
+  <main class="container my-2">
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+
+<!-- 4. Alerts -->
+    <div class="col">
+      <div class="card h-100 shadow p-3 bg-body rounded">
+        <div class="card-body">
+          <h5 class="card-title">Alerts</h5>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Rent for May 2025 is pending
+              <span class="badge bg-danger">Alert</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Agreement ends in 2 months
+              <span class="badge bg-warning text-dark">Upcoming</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Pending issue: Wi-Fi not working
+              <span class="badge bg-warning text-dark">Pending</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. Tenant Profile & Agreement Details -->
+    <div class="col">
+      <div class="card h-100 shadow p-3 bg-body rounded">
+        <div class="card-body">
+          <h5 class="card-title">Tenant Profile & Agreement Details</h5>
+          <table class="table">
+            <tr><th>Name:</th><td>John Doe</td></tr>
+            <tr><th>Aadhaar number:</th><td>123456789012</td></tr>
+            <tr><th>Address:</th><td>Boriwali East</td></tr>
+            <tr><th>Occupation:</th><td>Job</td></tr>
+            <tr><th>Monthly Rent:</th><td>₹15,000</td></tr>
+            <tr><th>Deposit:</th><td>₹30,000</td></tr>
+            <tr><th>Agreement Start:</th><td>01-Jan-2024</td></tr>
+            <tr><th>Agreement End:</th><td>31-Dec-2025</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- 3. Upload Monthly Receipts -->
+    <div class="col">
+      <div class="card h-100 shadow p-3 bg-body rounded">
+        <div class="card-body">
+          <h5 class="card-title">Upload Rent & Utility Receipts</h5>
+          <form>
+            <div class="mb-3">
+              <label for="rentReceipt" class="form-label">Rent Receipt</label>
+              <input class="form-control" type="file" id="rentReceipt">
+            </div>
+            <div class="mb-3">
+              <label for="waterBill" class="form-label">Water Bill</label>
+              <input class="form-control" type="file" id="waterBill">
+            </div>
+            <div class="mb-3">
+              <label for="electricityBill" class="form-label">Electricity Bill</label>
+              <input class="form-control" type="file" id="electricityBill">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Issue Management -->
+    <div class="col">
+      <div class="card h-100 shadow p-3 bg-body rounded">
+        <div class="card-body">
+          <h5 class="card-title">Raise & Track Issues</h5>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Describe your issue...">
+              <button class="btn btn-danger" type="submit">Raise Issue</button>
+            </div>
+          </form>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-light">
+                <tr>
+                  <th>Issue</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Leaking tap in kitchen</td>
+                  <td><span class="badge bg-success">Resolved</span></td>
+                </tr>
+                <tr>
+                  <td>Wi-Fi not working</td>
+                  <td><span class="badge bg-warning text-dark">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <form>
+            <div class="mb-3">
+              <h5 class="card-title">Expected Vacate Date</h5>
+              <input type="date" class="form-control" id="vacateDate">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Notice</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    </main>
+
+ <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 shadow-lg rounded">
+    <div class="container">
+      <p class="mb-1">© 2025 FinNest. All rights reserved.</p>
+      <p>
+        <a href="#" class="text-warning text-decoration-none">Privacy Policy</a> |
+        <a href="#" class="text-warning text-decoration-none">Terms</a> |
+        <a href="#" class="text-warning text-decoration-none">Support</a> |
+        <a href="./Contactus_page.html" class="text-warning text-decoration-none">About Us</a>
+      </p>
+      <div>
+        <a href="#" class="me-2 text-warning text-decoration-none"><i class="bi bi-facebook"> </i>Facebook</a>
+        <a href="#" class="me-2 text-warning text-decoration-none"><i class="bi bi-twitter"> </i>Twitter</a>
+        <a href="#" class="text-warning text-decoration-none"><i class="bi bi-linkedin"> </i>LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>

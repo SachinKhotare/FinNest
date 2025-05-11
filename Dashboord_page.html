@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FinNest - Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="./Images/Logo.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/home.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+   <header class="bg-primary text-white py-1 shadow-lg rounded">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold mt-2 mb-0">FinNest - Dashboard</h1>
+    <p class="lead fst-italic mb-0">Your all-in-one financial command center—instantly track rental income, expenses, investments, alerts, and tenant activities in one smart, intuitive dashboard.</p>
+  </div>
+</header>
+
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-0 shadow-lg rounded">
+    <div class="container">
+      <img src="./Images/Logo.png" alt="" width="25" height="24" class="d-inline-block align-text-top me-2">
+      <a class="navbar-brand" href="./Home_page.html">FinNest</a>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+
+          <!-- Dashboard -->
+        <li class="nav-item"><a class="nav-link text-white" href="./Dashboord_page.html"><i class="bi bi-graph-up-arrow"> </i>Dashboard</a></li>
+        <!-- Expenses -->
+          
+          <li class="nav-item"><a class="nav-link text-white" href="./Expneses_page.html"><i class="bi bi-fire"> </i>Expenses</a></li>
+
+          <!-- Investment -->
+          
+          <li class="nav-item"><a class="nav-link text-white" href="./Investment_page.html"><i class="bi bi-piggy-bank-fill"> </i>Investment</a></li>
+
+          <!-- Rental -->
+          
+          <li class="nav-item"><a class="nav-link text-white" href="./Owner-Rental_page.html"><i class="bi bi-currency-rupee"> </i>Rental</a></li>
+          
+          <li class="nav-item"><a class="nav-link text-white" href="./Online-Subscription_page.html"><i class="bi bi-globe"> </i>Online Subscription</a></li>
+          <!-- Logout Button -->
+        <li class="nav-item mr-0">
+          <a class="nav-link text-white" href="./Login_page.html"><button class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-person-fill-x"> </i>Logout</button></a>
+        </li>
+      
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- Start Page Content -->
+  <main class="container my-2">
+    <div class="containe my-2">
+       <div class="card shadow p-3 mb-3 bg-body rounded">
+      <div class="alert alert-info">
+    💡 Suggestion: Grocery expenses increased 20%. Consider reducing food waste.
+  </div>
+  <div class="alert alert-danger">
+    ⚠️ Water bill due in 3 days. Credit card bill due in 5 days.
+  </div>
+  </div>
+</div>
+  <div class="row row-cols-2">
+    <div class="col">
+        <!-- 1. Monthly Expenses Pie Chart -->
+  <div class="card shadow p-3 mb-3 bg-body rounded">
+    <div class="card-header bg-primary text-white">1. Monthly Expenses (Pie Chart)</div>
+    <div class="card-body chart-container">
+      <canvas id="expensesPieChart"></canvas>
+    </div>
+  </div>
+    </div>
+    <div class="col">
+     <!-- 2. Compare Last Two Months Expenses -->
+  <div class="card shadow p-3 mb-3 bg-body rounded">
+    <div class="card-header bg-success text-white">2. Last Two Months Expense Comparison</div>
+    <div class="card-body chart-container">
+      <canvas id="monthlyExpenseCompare"></canvas>
+    </div>
+  </div>
+    </div>
+    <div class="col">
+     <!-- 3. Tenant Income: Paid vs Unpaid -->
+  <div class="card shadow p-3 mb-2 bg-body rounded">
+    <div class="card-header bg-warning text-dark">3. Tenant Income (Paid vs Unpaid)</div>
+    <div class="card-body chart-container">
+      <canvas id="tenantIncomeChart"></canvas>
+    </div>
+  </div>
+    </div>
+    <div class="col">
+        <!-- 4. Investment: SIP & Stock -->
+  <div class="card shadow p-3 mb-2 bg-body rounded">
+    <div class="card-header bg-info text-white">4. Investment Overview (SIP & Stocks)</div>
+    <div class="card-body chart-container">
+      <canvas id="investmentChart"></canvas>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+  </main>
+<!-- End Page Content -->
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 shadow-lg rounded">
+    <div class="container">
+      <p class="mb-1">© 2025 FinNest. All rights reserved.</p>
+      <p>
+        <a href="#" class="text-warning text-decoration-none">Privacy Policy</a> |
+        <a href="#" class="text-warning text-decoration-none">Terms</a> |
+        <a href="#" class="text-warning text-decoration-none">Support</a> |
+        <a href="./Contactus_page.html" class="text-warning text-decoration-none">About Us</a>
+      </p>
+      <div>
+        <a href="#" class="me-2 text-warning text-decoration-none"><i class="bi bi-facebook"> </i>Facebook</a>
+        <a href="#" class="me-2 text-warning text-decoration-none"><i class="bi bi-twitter"> </i>Twitter</a>
+        <a href="#" class="text-warning text-decoration-none"><i class="bi bi-linkedin"> </i>LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  // 1. Expenses Pie Chart
+  new Chart(document.getElementById("expensesPieChart"), {
+    type: 'pie',
+    data: {
+      labels: ['Rent', 'Groceries', 'Utilities', 'Travel', 'Others'],
+      datasets: [{
+        data: [15000, 6000, 3000, 2000, 1000],
+        backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545', '#6c757d']
+      }]
+    }
+  });
+
+  // 2. Last 2 Months Expense Comparison
+  new Chart(document.getElementById("monthlyExpenseCompare"), {
+    type: 'bar',
+    data: {
+      labels: ['Rent', 'Groceries', 'Utilities', 'Travel', 'Others'],
+      datasets: [
+        {
+          label: 'April',
+          data: [15000, 5800, 2800, 1800, 1200],
+          backgroundColor: '#007bff'
+        },
+        {
+          label: 'May',
+          data: [15000, 6200, 3200, 2100, 1000],
+          backgroundColor: '#28a745'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'top' } }
+    }
+  });
+
+  // 3. Tenant Income Graph
+  new Chart(document.getElementById("tenantIncomeChart"), {
+    type: 'bar',
+    data: {
+      labels: ['Tenant 1', 'Tenant 2', 'Tenant 3'],
+      datasets: [
+        {
+          label: 'Paid',
+          data: [12000, 10000, 8000],
+          backgroundColor: '#198754'
+        },
+        {
+          label: 'Unpaid',
+          data: [0, 2000, 3000],
+          backgroundColor: '#dc3545'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'top' } }
+    }
+  });
+
+  // 4. SIP & Stock Investments
+  new Chart(document.getElementById("investmentChart"), {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+      datasets: [
+        {
+          label: 'SIP',
+          data: [5000, 5500, 5700, 6000, 6200],
+          borderColor: '#0d6efd',
+          fill: false,
+          tension: 0.3
+        },
+        {
+          label: 'Stocks',
+          data: [7000, 7500, 6800, 7200, 7800],
+          borderColor: '#fd7e14',
+          fill: false,
+          tension: 0.3
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'top' } }
+    }
+  });
+</script>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
