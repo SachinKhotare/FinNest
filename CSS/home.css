@@ -39,3 +39,15 @@ body {
     
   }
 
+/* Fixed Nav bar  */
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 70px; /* fixed height */
+}
+.main-content {
+  margin-top: 80px; /* push main content down */
+}  

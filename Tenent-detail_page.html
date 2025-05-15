@@ -11,17 +11,8 @@
   
 </head>
 <body>
-
-  <!-- Header -->
-<header class="bg-primary text-white py-4 shadow-lg rounded">
-  <div class="container text-center">
-    <h1 class="display-5 fw-semibold mb-1">FinNest - Tenant Portal</h1>
-    <p class="lead fst-italic mb-0">A smart and secure space for tenants to manage rent, agreements, utility receipts, issue tracking, and communication with property owners—all in one place.</p>
-  </div>
-</header>
-
 <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-0 shadow-lg rounded">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-0 fixed-navbar shadow-lg rounded">
     <div class="container">
       <img src="./Images/Logo.png" alt="" width="25" height="24" class="d-inline-block align-text-top me-2">
       <a class="navbar-brand" href="./Home_page.html">FinNest</a>
@@ -45,16 +36,19 @@
   </nav>
 
    <!-- Main Content -->
-  <main class="container my-2">
-
-<div class="row row-cols-1 row-cols-md-2 g-4">
-
-<!-- 4. Alerts -->
-    <div class="col">
-      <div class="card h-100 shadow p-3 bg-body rounded">
-        <div class="card-body">
-          <h5 class="card-title">Alerts</h5>
-          <ul class="list-group">
+   <!-- Main Content -->
+  <main class="container main-content">
+    <!--Accordion start-->
+    <div class="card shadow p-1 mb-2 bg-body rounded">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Notifications
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <ul class="list-group mt-2">
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Rent for May 2025 is pending
               <span class="badge bg-danger">Alert</span>
@@ -68,16 +62,22 @@
               <span class="badge bg-warning text-dark">Pending</span>
             </li>
           </ul>
-        </div>
-      </div>
+      
     </div>
+  </div>
+ 
+  </div>
+</div>
+</div>
 
-    <!-- 1. Tenant Profile & Agreement Details -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
+  
+      <!-- Tenant Profile & Agreement Details -->
     <div class="col">
-      <div class="card h-100 shadow p-3 bg-body rounded">
+      <div class="card h-100 shadow p-1 bg-body rounded">
         <div class="card-body">
           <h5 class="card-title">Tenant Profile & Agreement Details</h5>
-          <table class="table">
+          <table class="table table-bordered">
             <tr><th>Name:</th><td>John Doe</td></tr>
             <tr><th>Aadhaar number:</th><td>123456789012</td></tr>
             <tr><th>Address:</th><td>Boriwali East</td></tr>
@@ -91,11 +91,101 @@
       </div>
     </div>
 
-    
+    <!-- Agreement Copy Image -->
+<div class="col mb-3">
+  <div class="card h-100 shadow p-1 bg-body rounded">
+    <div class="card-body">
+      <h5 class="card-title">Agreement Copy</h5>
+      <p class="mb-2">Below is your agreement copy uploaded at the time of contract:</p>
+      
+      <!-- Centered Image -->
+      <div class="text-center">
+        <img src="./Images/rent-agreement.png" 
+             alt="Agreement Copy" 
+             class="img-thumbnail rounded border"
+             style="width: 250px; height: auto;">
+      </div>
+      
+      <p class="text-muted mt-2" style="font-size: 0.9rem;">If you wish to re-upload or update your agreement, please contact owner.</p>
+    </div>
+  </div>
+</div>
 
-    <!-- 3. Upload Monthly Receipts -->
-    <div class="col">
-      <div class="card h-100 shadow p-3 bg-body rounded">
+     <!-- Past Payment Details -->
+<div class="col">
+  <div class="card h-100 shadow p-1 bg-body rounded">
+    <div class="card-body">
+      <h5 class="card-title">Past Payment Details</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th>Month</th>
+              <th>Rent</th>
+              <th>Water Bill</th>
+              <th>Electricity Bill</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>January 2025</td>
+              <td class="text-success">Paid</td>
+              <td class="text-success">Paid</td>
+              <td class="text-success">Paid</td>
+            </tr>
+            <tr>
+              <td>February 2025</td>
+              <td class="text-success">Paid</td>
+              <td class="text-success">Paid</td>
+              <td class="bg-danger-subtle text-danger">Pending</td>
+            </tr>
+            <tr>
+              <td>March 2025</td>
+              <td class="text-success">Paid</td>
+              <td class="text-success">Paid</td>
+              <td class="text-success">Paid</td>
+            </tr>
+            <tr>
+              <td>April 2025</td>
+              <td class="text-success">Paid</td>
+              <td class="bg-danger-subtle text-danger">Pending</td>
+              <td class="text-success">Paid</td>
+            </tr>
+            <tr>
+              <td>January 2025</td>
+              <td class="text-success">Paid</td>
+              <td class="text-success">Paid</td>
+              <td class="text-success">Paid</td>
+            </tr>
+            <tr>
+              <td>February 2025</td>
+              <td class="text-success">Paid</td>
+              <td class="text-success">Paid</td>
+              <td class="bg-danger-subtle text-danger">Pending</td>
+            </tr>
+            <tr>
+              <td>March 2025</td>
+              <td class="text-success">Paid</td>
+              <td class="text-success">Paid</td>
+              <td class="text-success">Paid</td>
+            </tr>
+            <tr>
+              <td>April 2025</td>
+              <td class="text-success">Paid</td>
+              <td class="bg-danger-subtle text-danger">Pending</td>
+              <td class="text-success">Paid</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Upload Rent & Utility Receipts -->
+    <div class="col mb-3">
+      <div class="card h-100 shadow p-1 bg-body rounded">
         <div class="card-body">
           <h5 class="card-title">Upload Rent & Utility Receipts</h5>
           <form>
@@ -117,9 +207,9 @@
       </div>
     </div>
 
-    <!-- 2. Issue Management -->
-    <div class="col">
-      <div class="card h-100 shadow p-3 bg-body rounded">
+    <!-- Raise & Track Issues -->
+    <div class="col mb-3">
+      <div class="card h-100 shadow p-1 bg-body rounded">
         <div class="card-body">
           <h5 class="card-title">Raise & Track Issues</h5>
           <form class="mb-3">
@@ -158,8 +248,30 @@
         </div>
       </div>
     </div>
+  
 
-    </main>
+<!--New Feature start-->
+<!-- Monthly Rent Payment Request -->
+<div class="col mb-3">
+  <div class="card h-100 shadow p-1 bg-body rounded">
+    <div class="card-body">
+      <h5 class="card-title">📩 Monthly Rent Payment Request</h5>
+      <p>If you’re unable to pay this month’s rent, kindly submit a reason below for the owner's review.</p>
+      <form>
+        <div class="mb-2">
+          <label for="rentReason" class="form-label">Reason for Delay</label>
+          <textarea class="form-control" id="rentReason" rows="4" placeholder="Explain your reason..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-warning">Submit Request</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!--New Feature end-->
+</div>
+</main>
 
  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-4 shadow-lg rounded">

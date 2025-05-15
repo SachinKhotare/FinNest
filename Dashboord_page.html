@@ -11,16 +11,9 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- Header -->
-   <header class="bg-primary text-white py-1 shadow-lg rounded">
-  <div class="container text-center">
-    <h1 class="display-4 fw-bold mt-2 mb-0">FinNest - Dashboard</h1>
-    <p class="lead fst-italic mb-0">Your all-in-one financial command center—instantly track rental income, expenses, investments, alerts, and tenant activities in one smart, intuitive dashboard.</p>
-  </div>
-</header>
 
 <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-0 shadow-lg rounded">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-3 fixed-navbar shadow-lg rounded"  >
     <div class="container">
       <img src="./Images/Logo.png" alt="" width="25" height="24" class="d-inline-block align-text-top me-2">
       <a class="navbar-brand" href="./Home_page.html">FinNest</a>
@@ -42,7 +35,7 @@
           
           <li class="nav-item"><a class="nav-link text-white" href="./Owner-Rental_page.html"><i class="bi bi-currency-rupee"> </i>Rental</a></li>
           
-          <li class="nav-item"><a class="nav-link text-white" href="./Online-Subscription_page.html"><i class="bi bi-globe"> </i>Online Subscription</a></li>
+          
           <!-- Logout Button -->
         <li class="nav-item mr-0">
           <a class="nav-link text-white" href="./Login_page.html"><button class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-person-fill-x"> </i>Logout</button></a>
@@ -53,21 +46,47 @@
     </div>
   </nav>
     <!-- Start Page Content -->
-  <main class="container my-2">
-    <div class="containe my-2">
-       <div class="card shadow p-3 mb-3 bg-body rounded">
-      <div class="alert alert-info">
-    💡 Suggestion: Grocery expenses increased 20%. Consider reducing food waste.
-  </div>
-  <div class="alert alert-danger">
+  <main class="container main-content">
+    <div class="containe my-2 mt-80px">
+
+<!--Accordion start-->
+    <div class="card shadow p-1 mb-3 bg-body rounded">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        🚨 Alerts
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="alert alert-danger mt-3">
     ⚠️ Water bill due in 3 days. Credit card bill due in 5 days.
   </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        💡 Suggestion
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="alert alert-info mt-3">
+    💡 Suggestion: Grocery expenses increased 20%. Consider reducing food waste.
+  </div>
+      
+    </div>
+  </div>
+ 
   </div>
 </div>
+</div>
+    <!--Accordian ENd-->
+
   <div class="row row-cols-2">
     <div class="col">
         <!-- 1. Monthly Expenses Pie Chart -->
-  <div class="card shadow p-3 mb-3 bg-body rounded">
+  <div class="card shadow p-2 mb-3 bg-body rounded">
     <div class="card-header bg-primary text-white">1. Monthly Expenses (Pie Chart)</div>
     <div class="card-body chart-container">
       <canvas id="expensesPieChart"></canvas>
@@ -76,7 +95,7 @@
     </div>
     <div class="col">
      <!-- 2. Compare Last Two Months Expenses -->
-  <div class="card shadow p-3 mb-3 bg-body rounded">
+  <div class="card shadow p-2 mb-3 bg-body rounded">
     <div class="card-header bg-success text-white">2. Last Two Months Expense Comparison</div>
     <div class="card-body chart-container">
       <canvas id="monthlyExpenseCompare"></canvas>
@@ -85,7 +104,7 @@
     </div>
     <div class="col">
      <!-- 3. Tenant Income: Paid vs Unpaid -->
-  <div class="card shadow p-3 mb-2 bg-body rounded">
+  <div class="card shadow p-2 mb-2 bg-body rounded">
     <div class="card-header bg-warning text-dark">3. Tenant Income (Paid vs Unpaid)</div>
     <div class="card-body chart-container">
       <canvas id="tenantIncomeChart"></canvas>
@@ -94,7 +113,7 @@
     </div>
     <div class="col">
         <!-- 4. Investment: SIP & Stock -->
-  <div class="card shadow p-3 mb-2 bg-body rounded">
+  <div class="card shadow p-2 mb-2 bg-body rounded">
     <div class="card-header bg-info text-white">4. Investment Overview (SIP & Stocks)</div>
     <div class="card-body chart-container">
       <canvas id="investmentChart"></canvas>

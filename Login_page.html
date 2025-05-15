@@ -11,13 +11,7 @@
   <link rel="stylesheet" href="./CSS/home.css">
 </head>
 <body>
-<!-- Header -->
- <header class="bg-primary text-white py-1 shadow-lg rounded">
-  <div class="container text-center">
-    <h1 class="display-4 fw-bold mt-2 mb-0">FinNest - Login Page</h1>
-    <p class="lead fst-italic mb-0">Securely log in to FinNest as a Tenant or Owner to manage your rentals, track expenses, monitor investments, and stay updated with alerts - all in one smart finance platform.</p>
-  </div>
-</header>
+
 
 <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-0 shadow-lg rounded">
@@ -27,7 +21,10 @@
 
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto">
-         
+         <!-- New User Button -->
+        <li class="nav-item mr-0">
+          <a class="nav-link text-white rounded" href="./New User_page.html"><button class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-person-fill-add"> </i>Create Account</button></a>
+        </li>
         </ul>
         
       </div>
@@ -60,8 +57,7 @@
         <div class="d-grid">
           <button type="submit" onclick="login()" class="btn btn-primary">Login</button>
         </div>
-        <p class="text-center mt-3"><a href="./Change-Password_page.html">Forgot Password?</a></p>
-        <p class=" text-center mt-3">Not a User? <a href="./New User_page.html" class="text-primary">Register</a></p>
+        <p class="text-center mt-2"><a href="./Change-Password_page.html">Forgot Password?</a></p>
       </form>
       
     </div>

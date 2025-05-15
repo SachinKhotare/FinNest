@@ -11,18 +11,8 @@
 </head>
 <body>
 
-  <!-- Header -->
-
-  <header class="bg-primary text-white py-1 shadow-lg rounded">
-  <div class="container text-center">
-    <h1 class="display-4 fw-bold mt-2 mb-0">FinNest – Rental Income Management</h1>
-    <p class="lead fst-italic mb-0">Simplify your rental income tracking with automated rent logs, tenant insights, agreement alerts, and payment status.</p>
-  </div>
-</header>
-
-
  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-0 shadow-lg rounded">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-0  fixed-navbar shadow-lg rounded">
     <div class="container">
       <img src="./Images/Logo.png" alt="" width="25" height="24" class="d-inline-block align-text-top me-2">
       <a class="navbar-brand" href="./Home_page.html">FinNest</a>
@@ -56,22 +46,37 @@
 
 
   <!-- Page Content -->
-  <main class="container my-3">
-    <!-- Alert Section -->
-<div class="card shadow p-2 mb-3 bg-body rounded">
-  <div class="alert alert-warning">
+  <main class="container main-content">
+
+    <!--Accordion start-->
+    <div class="card shadow p-1 mb-3 bg-body rounded">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        💡 Smart Saving Suggestions
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+     
+  <div class="alert alert-warning mt-3">
       ⚠️ Agreement is expiring in 60 days. Please renew.
     </div>
     <div class="alert alert-warning" role="alert">
             ⚠️ 1 tenant has pending rent payments!
         </div>
-        </div>
-<div class="container mb-2">
-
         
-  <!-- 1. Add/Delete Tenant -->
+    
+    </div>
+  </div>
+</div>
+</div>
+    <!--Accordian ENd-->
+
+<div class="container mb-2">
+  <!-- 1. Add / Delete Tenant Details -->
   <div class="section-title mb-2">1) Add / Delete Tenant Details</div>
-  <div class="card shadow p-3 mb-3 bg-body rounded">
+<div class="card shadow p-3 mb-3 bg-body rounded">
     <form>
       <div class="row g-3">
         <div class="col-md-6">
@@ -101,7 +106,6 @@
       </div>
     </form>
   </div>
-
   <!-- 2. Monthly Rent Status for All Tenants -->
 <div class="section-title mb-2">2) Monthly Rent Status for All Tenants</div>
 <div class="card shadow p-3 mb-4 bg-body rounded">
@@ -240,6 +244,48 @@
     </table>
   </div>
 </div>
+<!-- Rent Delay Requests (Owner View) -->
+ <div class="section-title mb-2">5) Rent Delay Requests</div>
+<div class="col mb-3">
+  <div class="card h-100 shadow p-1 bg-body rounded">
+    <div class="card-body">
+          <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Tenant Name</th>
+              <th>Month</th>
+              <th>Reason for Delay</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rahul Sharma</td>
+              <td>May 2025</td>
+              <td>Salary not credited yet, will pay by 20th.</td>
+              <td>
+                <button class="btn btn-success btn-sm me-1">Approve</button>
+                <button class="btn btn-danger btn-sm">Reject</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Priya Verma</td>
+              <td>May 2025</td>
+              <td>Medical emergency, request extension till next month.</td>
+              <td>
+                <button class="btn btn-success btn-sm me-1">Approve</button>
+                <button class="btn btn-danger btn-sm">Reject</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
   </main>
 
