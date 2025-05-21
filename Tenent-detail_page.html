@@ -1,279 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FinNest - Tenant Portal</title>
-   <link rel="icon" type="image/x-icon" href="./Images/Logo.ico">
+  <link rel="icon" type="image/x-icon" href="./Images/Logo.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="./CSS/home.css">
-  
+
 </head>
+
 <body>
-<!-- Navbar -->
+  <!-- Navbar start -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-0 fixed-navbar shadow-lg rounded">
     <div class="container">
       <img src="./Images/Logo.png" alt="" width="25" height="24" class="d-inline-block align-text-top me-2">
       <a class="navbar-brand" href="./Index.html">FinNest</a>
-
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto">
-
-          
-        <!-- Password Changed Button -->
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link text-white" href="./Change-Password_page.html"><button class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-plus-square-dotted"> </i>Change Password</button></a>
+          <a class="nav-link text-white" href="./Change-Password_page.html"><button
+              class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-plus-square-dotted">
+              </i>Change Password</button></a>
         </li>
-        <!-- Logout Button -->
         <li class="nav-item">
-          <a class="nav-link text-white" href="./Login_page.html"><button class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-person-fill-x"> </i>Logout</button></a>
+          <a class="nav-link text-white" href="./Login_page.html"><button
+              class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-person-fill-x">
+              </i>Logout</button></a>
         </li>
-      
-        </ul>
-      </div>
+      </ul>
     </div>
   </nav>
+  <!-- Navbar end -->
 
-   <!-- Main Content -->
-   <!-- Main Content -->
+
+  <!-- Main Content -->
   <main class="container main-content">
     <!--Accordion start-->
     <div class="card shadow p-1 mb-2 bg-body rounded">
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-    <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Notifications
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <ul class="list-group mt-2">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Rent for May 2025 is pending
-              <span class="badge bg-danger">Alert</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Agreement ends in 2 months
-              <span class="badge bg-warning text-dark">Upcoming</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Pending issue: Wi-Fi not working
-              <span class="badge bg-warning text-dark">Pending</span>
-            </li>
-          </ul>
-      
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              💡 Notifications
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <ul class="list-group mt-2">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Rent for May 2025 is pending
+                <span class="badge bg-danger">Alert</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Agreement ends in 2 months
+                <span class="badge bg-warning text-dark">Upcoming</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                Pending issue: Wi-Fi not working
+                <span class="badge bg-warning text-dark">Pending</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
- 
-  </div>
-</div>
-</div>
+    </div>
 
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
-  
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
+
       <!-- Tenant Profile & Agreement Details -->
-    <div class="col">
-      <div class="card h-100 shadow p-1 bg-body rounded">
-        <div class="card-body">
-          <h5 class="card-title">Tenant Profile & Agreement Details</h5>
-          <table class="table table-bordered">
-            <tr><th>Name:</th><td>John Doe</td></tr>
-            <tr><th>Aadhaar number:</th><td>123456789012</td></tr>
-            <tr><th>Address:</th><td>Boriwali East</td></tr>
-            <tr><th>Occupation:</th><td>Job</td></tr>
-            <tr><th>Monthly Rent:</th><td>₹15,000</td></tr>
-            <tr><th>Deposit:</th><td>₹30,000</td></tr>
-            <tr><th>Agreement Start:</th><td>01-Jan-2024</td></tr>
-            <tr><th>Agreement End:</th><td>31-Dec-2025</td></tr>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- Agreement Copy Image -->
-<div class="col mb-3">
-  <div class="card h-100 shadow p-1 bg-body rounded">
-    <div class="card-body">
-      <h5 class="card-title">Agreement Copy</h5>
-      <p class="mb-2">Below is your agreement copy uploaded at the time of contract:</p>
-      
-      <!-- Centered Image -->
-      <div class="text-center">
-        <img src="./Images/rent-agreement.png" 
-             alt="Agreement Copy" 
-             class="img-thumbnail rounded border"
-             style="width: 250px; height: auto;">
-      </div>
-      
-      <p class="text-muted mt-2" style="font-size: 0.9rem;">If you wish to re-upload or update your agreement, please contact owner.</p>
-    </div>
-  </div>
-</div>
-
-     <!-- Past Payment Details -->
-<div class="col">
-  <div class="card h-100 shadow p-1 bg-body rounded">
-    <div class="card-body">
-      <h5 class="card-title">Past Payment Details</h5>
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <thead class="table-light">
-            <tr>
-              <th>Month</th>
-              <th>Rent</th>
-              <th>Water Bill</th>
-              <th>Electricity Bill</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>January 2025</td>
-              <td class="text-success">Paid</td>
-              <td class="text-success">Paid</td>
-              <td class="text-success">Paid</td>
-            </tr>
-            <tr>
-              <td>February 2025</td>
-              <td class="text-success">Paid</td>
-              <td class="text-success">Paid</td>
-              <td class="bg-danger-subtle text-danger">Pending</td>
-            </tr>
-            <tr>
-              <td>March 2025</td>
-              <td class="text-success">Paid</td>
-              <td class="text-success">Paid</td>
-              <td class="text-success">Paid</td>
-            </tr>
-            <tr>
-              <td>April 2025</td>
-              <td class="text-success">Paid</td>
-              <td class="bg-danger-subtle text-danger">Pending</td>
-              <td class="text-success">Paid</td>
-            </tr>
-            <tr>
-              <td>January 2025</td>
-              <td class="text-success">Paid</td>
-              <td class="text-success">Paid</td>
-              <td class="text-success">Paid</td>
-            </tr>
-            <tr>
-              <td>February 2025</td>
-              <td class="text-success">Paid</td>
-              <td class="text-success">Paid</td>
-              <td class="bg-danger-subtle text-danger">Pending</td>
-            </tr>
-            <tr>
-              <td>March 2025</td>
-              <td class="text-success">Paid</td>
-              <td class="text-success">Paid</td>
-              <td class="text-success">Paid</td>
-            </tr>
-            <tr>
-              <td>April 2025</td>
-              <td class="text-success">Paid</td>
-              <td class="bg-danger-subtle text-danger">Pending</td>
-              <td class="text-success">Paid</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    <!-- Upload Rent & Utility Receipts -->
-    <div class="col mb-3">
-      <div class="card h-100 shadow p-1 bg-body rounded">
-        <div class="card-body">
-          <h5 class="card-title">Upload Rent & Utility Receipts</h5>
-          <form>
-            <div class="mb-3">
-              <label for="rentReceipt" class="form-label">Rent Receipt</label>
-              <input class="form-control" type="file" id="rentReceipt">
-            </div>
-            <div class="mb-3">
-              <label for="waterBill" class="form-label">Water Bill</label>
-              <input class="form-control" type="file" id="waterBill">
-            </div>
-            <div class="mb-3">
-              <label for="electricityBill" class="form-label">Electricity Bill</label>
-              <input class="form-control" type="file" id="electricityBill">
-            </div>
-            <button type="submit" class="btn btn-primary">Upload</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!-- Raise & Track Issues -->
-    <div class="col mb-3">
-      <div class="card h-100 shadow p-1 bg-body rounded">
-        <div class="card-body">
-          <h5 class="card-title">Raise & Track Issues</h5>
-          <form class="mb-3">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Describe your issue...">
-              <button class="btn btn-danger" type="submit">Raise Issue</button>
-            </div>
-          </form>
-          <div class="table-responsive">
+      <div class="col">
+        <div class="card h-100 shadow p-1 bg-body rounded">
+          <div class="card-body">
+            <h5 class="card-title">Tenant Profile & Agreement Details</h5>
             <table class="table table-bordered">
-              <thead class="table-light">
-                <tr>
-                  <th>Issue</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Leaking tap in kitchen</td>
-                  <td><span class="badge bg-success">Resolved</span></td>
-                </tr>
-                <tr>
-                  <td>Wi-Fi not working</td>
-                  <td><span class="badge bg-warning text-dark">Pending</span></td>
-                </tr>
-              </tbody>
+              <tr>
+                <th>Name:</th>
+                <td>John Doe</td>
+              </tr>
+              <tr>
+                <th>Aadhaar number:</th>
+                <td>123456789012</td>
+              </tr>
+              <tr>
+                <th>Address:</th>
+                <td>Boriwali East</td>
+              </tr>
+              <tr>
+                <th>Occupation:</th>
+                <td>Job</td>
+              </tr>
+              <tr>
+                <th>Monthly Rent:</th>
+                <td>₹15,000</td>
+              </tr>
+              <tr>
+                <th>Deposit:</th>
+                <td>₹30,000</td>
+              </tr>
+              <tr>
+                <th>Agreement Start:</th>
+                <td>01-Jan-2024</td>
+              </tr>
+              <tr>
+                <th>Agreement End:</th>
+                <td>31-Dec-2025</td>
+              </tr>
             </table>
           </div>
-          <form>
-            <div class="mb-3">
-              <h5 class="card-title">Expected Vacate Date</h5>
-              <input type="date" class="form-control" id="vacateDate">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit Notice</button>
-          </form>
         </div>
       </div>
-    </div>
-  
 
-<!--New Feature start-->
-<!-- Monthly Rent Payment Request -->
-<div class="col mb-3">
-  <div class="card h-100 shadow p-1 bg-body rounded">
-    <div class="card-body">
-      <h5 class="card-title">📩 Monthly Rent Payment Request</h5>
-      <p>If you’re unable to pay this month’s rent, kindly submit a reason below for the owner's review.</p>
-      <form>
-        <div class="mb-2">
-          <label for="rentReason" class="form-label">Reason for Delay</label>
-          <textarea class="form-control" id="rentReason" rows="4" placeholder="Explain your reason..."></textarea>
+      <!-- Agreement Copy Image -->
+      <div class="col">
+        <div class="card h-100 shadow p-1 bg-body rounded">
+          <div class="card-body">
+            <h5 class="card-title">Agreement Copy</h5>
+            <p class="mb-2">Below is your agreement copy uploaded at the time of contract:</p>
+
+            <!-- Centered Image -->
+            <div class="text-center">
+              <img src="./Images/rent-agreement.png" alt="Agreement Copy" class="img-thumbnail rounded border"
+                style="width: 250px; height: auto;">
+            </div>
+
+            <p class="text-muted mt-2" style="font-size: 0.9rem;">If you wish to re-upload or update your agreement,
+              please contact owner.</p>
+          </div>
         </div>
-        <button type="submit" class="btn btn-warning">Submit Request</button>
-      </form>
+      </div>
+
+      <!-- Past Payment Details -->
+      <div class="col">
+        <div class="card h-100 shadow p-1 bg-body rounded">
+          <div class="card-body">
+            <h5 class="card-title">Past Payment Details</h5>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead class="table-light">
+                  <tr>
+                    <th>Month</th>
+                    <th>Rent</th>
+                    <th>Water Bill</th>
+                    <th>Electricity Bill</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>January 2025</td>
+                    <td class="text-success">Paid</td>
+                    <td class="text-success">Paid</td>
+                    <td class="text-success">Paid</td>
+                  </tr>
+                  <tr>
+                    <td>February 2025</td>
+                    <td class="text-success">Paid</td>
+                    <td class="text-success">Paid</td>
+                    <td class="bg-danger-subtle text-danger">Pending</td>
+                  </tr>
+                  <tr>
+                    <td>March 2025</td>
+                    <td class="text-success">Paid</td>
+                    <td class="text-success">Paid</td>
+                    <td class="text-success">Paid</td>
+                  </tr>
+                  <tr>
+                    <td>April 2025</td>
+                    <td class="text-success">Paid</td>
+                    <td class="bg-danger-subtle text-danger">Pending</td>
+                    <td class="text-success">Paid</td>
+                  </tr>
+                  <tr>
+                    <td>January 2025</td>
+                    <td class="text-success">Paid</td>
+                    <td class="text-success">Paid</td>
+                    <td class="text-success">Paid</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Upload Rent & Utility Receipts -->
+      <div class="col">
+        <div class="card h-100 shadow p-1 bg-body rounded">
+          <div class="card-body">
+            <h5 class="card-title">Upload Rent & Utility Receipts</h5>
+            <form>
+              <div class="mb-3">
+                <label for="rentReceipt" class="form-label">Rent Receipt</label>
+                <input class="form-control" type="file" id="rentReceipt">
+              </div>
+              <div class="mb-3">
+                <label for="waterBill" class="form-label">Water Bill</label>
+                <input class="form-control" type="file" id="waterBill">
+              </div>
+              <div class="mb-3">
+                <label for="electricityBill" class="form-label">Electricity Bill</label>
+                <input class="form-control" type="file" id="electricityBill">
+              </div>
+              <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Raise & Track Issues -->
+      <div class="col mb-3">
+        <div class="card h-100 shadow p-1 bg-body rounded">
+          <div class="card-body">
+            <h5 class="card-title">Raise & Track Issues</h5>
+            <form class="mb-3">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Describe your issue...">
+                <button class="btn btn-danger" type="submit">Raise Issue</button>
+              </div>
+            </form>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead class="table-light">
+                  <tr>
+                    <th>Issue</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Leaking tap in kitchen</td>
+                    <td><span class="badge bg-success">Resolved</span></td>
+                  </tr>
+                  <tr>
+                    <td>Wi-Fi not working</td>
+                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <form>
+              <div class="mb-3">
+                <h5 class="card-title">Expected Vacate Date</h5>
+                <input type="date" class="form-control" id="vacateDate">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit Notice</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Monthly Rent Payment Request -->
+      <div class="col mb-3">
+        <div class="card h-100 shadow p-1 bg-body rounded">
+          <div class="card-body">
+            <h5 class="card-title">📩 Monthly Rent Payment Request</h5>
+            <p>If you’re unable to pay this month’s rent, kindly submit a reason below for the owner's review.</p>
+            <form>
+              <div class="mb-2">
+                <label for="rentReason" class="form-label">Reason for Delay</label>
+                <textarea class="form-control" id="rentReason" rows="4" placeholder="Explain your reason..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-warning">Submit Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</div>
+  </main>
 
-
-<!--New Feature end-->
-</div>
-</main>
-
- <!-- Footer -->
+  <!-- Footer start -->
   <footer class="bg-dark text-white text-center py-4 shadow-lg rounded">
     <div class="container">
       <p class="mb-1">© 2025 FinNest. All rights reserved.</p>
@@ -290,11 +291,11 @@
       </div>
     </div>
   </footer>
+  <!-- Footer end -->
 
   <!-- Bootstrap Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
 </body>
+
 </html>
