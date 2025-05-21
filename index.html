@@ -21,26 +21,43 @@
   </header>
   <!-- Header end -->
 
-  <!-- Navbar start -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-0 shadow-lg rounded">
-    <div class="container">
+ <!-- Navbar start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg rounded">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="./Index.html">
       <img src="./Images/Logo.png" alt="" width="25" height="24" class="d-inline-block align-text-top me-2">
-      <a class="navbar-brand" href="./Index.html">FinNest</a>
+      FinNest
+    </a>
+    
+    <!-- Navbar Toggler Button (Hamburger Menu) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item mr-0 ">
-          <a class="nav-link text-white " href="./Login_page.html"><button
-              class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-arrow-up-right-circle">
-              </i>Login</button></a>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./Login_page.html">
+            <button class="btn btn-outline-light btn-sm rounded">
+              <i class="bi bi-arrow-up-right-circle"></i> Login
+            </button>
+          </a>
         </li>
-        <li class="nav-item mr-0">
-          <a class="nav-link text-white rounded" href="./New User_page.html"><button
-              class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-person-fill-add"> </i>Create
-              Account</button></a>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./New User_page.html">
+            <button class="btn btn-outline-light btn-sm rounded">
+              <i class="bi bi-person-fill-add"></i> Create Account
+            </button>
+          </a>
         </li>
       </ul>
     </div>
-  </nav>
-  <!-- Navbar end -->
+  </div>
+</nav>
+<!-- Navbar end -->
+
 
   <!-- Page Content Start-->
   <main class="container mt-3 mb-3">
@@ -48,7 +65,7 @@
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card h-100 shadow p-3 bg-body rounded">
-            <img src="./Images/Expnes.jpg" class="card-img-top" alt="...">
+            <img src="./Images/Expnes.jpg" class="card-img-top img-fluid" alt="...">
             <div class="card-body pb-0">
               <h5 class="card-title">FinNest - Smart Expense Management</h5>
               <p class="card-text">FinNest provides categorized tracking, budget setting, and insightful reports.
@@ -59,7 +76,7 @@
         </div>
         <div class="col">
           <div class="card h-100 shadow p-3 bg-body rounded">
-            <img src="./Images/Investment.png" class="card-img-top" alt="...">
+            <img src="./Images/Investment.png" class="card-img-top img-fluid" alt="...">
             <div class="card-body pb-0">
               <h5 class="card-title">FinNest - Investment Management</h5>
               <p class="card-text">FinNest Investment Management gives you a clear view of your investment portfolio,
@@ -71,7 +88,7 @@
         </div>
         <div class="col">
           <div class="card h-100 shadow p-3  bg-body rounded">
-            <img src="./Images/Rental.jpg" class="card-img-top" alt="...">
+            <img src="./Images/Rental.jpg" class="card-img-top img-fluid" alt="...">
             <div class="card-body pb-0">
               <h5 class="card-title">FinNest - Rental Income Management</h5>
               <p class="card-text">FinNest Rental Income Management empowers property owners to efficiently track and

@@ -14,29 +14,41 @@
 
 <body>
 
-  <!-- Navbar start -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-3 fixed-navbar shadow-lg rounded">
-    <div class="container">
-      <img src="./Images/Logo.png" alt="" width="25" height="24" class="d-inline-block align-text-top me-2">
-      <a class="navbar-brand" href="./Index.html">FinNest</a>
+ <!-- Navbar start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3 fixed-navbar shadow-lg rounded">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="./Index.html">
+      <img src="./Images/Logo.png" alt="Logo" width="25" height="24" class="me-2">
+      FinNest
+    </a>
+
+    <!-- Toggler for small screens -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse transparent-collapse p-2" id="navbarContent">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link text-white" href="./Dashboord_page.html"><i
-              class="bi bi-graph-up-arrow"> </i>Dashboard</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="./Expneses_page.html"><i class="bi bi-fire">
-            </i>Expenses</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="./Investment_page.html"><i
-              class="bi bi-piggy-bank-fill"> </i>Investment</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="./Owner-Rental_page.html"><i
-              class="bi bi-currency-rupee"> </i>Rental</a></li>
-        <li class="nav-item mr-0">
-          <a class="nav-link text-white" href="./Login_page.html"><button
-              class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-person-fill-x">
-              </i>Logout</button></a>
+        <li class="nav-item"><a class="nav-link text-white" href="./Dashboord_page.html"><i class="bi bi-graph-up-arrow"></i> Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="./Expneses_page.html"><i class="bi bi-fire"></i> Expenses</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="./Investment_page.html"><i class="bi bi-piggy-bank-fill"></i> Investment</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="./Owner-Rental_page.html"><i class="bi bi-currency-rupee"></i> Rental</a></li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./Login_page.html">
+            <button class="btn btn-outline-light btn-sm btn-shadow-blue rounded">
+              <i class="bi bi-person-fill-x"></i> Logout
+            </button>
+          </a>
         </li>
       </ul>
     </div>
-  </nav>
-  <!-- Navbar end -->
+  </div>
+</nav>
+<!-- Navbar end -->
+
+
 
   <!-- Start Page Content -->
   <main class="container main-content">

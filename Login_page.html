@@ -12,22 +12,37 @@
 </head>
 <body>
 
-  <!-- Navbar start-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mr-0 mb-0 shadow-lg rounded">
-    <div class="container">
-      <img src="./Images/Logo.png" alt="" width="25" height="24" class="d-inline-block align-text-top me-2">
-      <a class="navbar-brand" href="./Index.html">FinNest</a>
+  <!-- Navbar start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-0 shadow-lg rounded">
+  <div class="container">
+    <!-- Brand/Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="./Index.html">
+      <img src="./Images/Logo.png" alt="Logo" width="25" height="24" class="me-2">
+      FinNest
+    </a>
+
+    <!-- Toggler for small screens -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse transparent-collapse" id="navbarCollapse">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item mr-0">
-          <a class="nav-link text-white rounded" href="./New User_page.html"><button
-              class="btn btn-outline-light btn-sm btn-shadow-blue rounded"><i class="bi bi-person-fill-add"> </i>Create
-              Account</button></a>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="./New User_page.html">
+            <button class="btn btn-outline-light btn-sm btn-shadow-blue rounded">
+              <i class="bi bi-person-fill-add"></i> Create Account
+            </button>
+          </a>
         </li>
       </ul>
-
     </div>
-  </nav>
-  <!-- Navbar end-->
+  </div>
+</nav>
+<!-- Navbar end -->
+
 
   <!-- Main Content -->
   <main class="container mt-3 mb-3">
